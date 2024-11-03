@@ -1,0 +1,286 @@
+.field-title {
+  display: flex !important;
+  align-items: flex-end;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  color: inherit;
+  font-weight: 400;
+
+  .field-symbols {
+    margin-left: auto;
+    font-size: 0.75rem;
+  }
+}
+
+.ryb-border-error-color {
+  border-color: #f44336 !important;
+}
+
+.confirmation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image-webp {
+  z-index: 10;
+  position: absolute;
+  right: -0.25rem;
+  top: 0.25rem;
+  transform: scale(0.8125);
+}
+
+.wrapper-page-default {
+  display: flex;
+  flex-direction: column;
+
+  .p-card-body {
+    display: flex;
+    flex: 1;
+
+    .card-image-wrapper-width {
+      width: 200px;
+    }
+
+    .card-image-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1.5rem;
+
+      .card-image {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid #e9ecef;
+
+        .card-image-container {
+          position: relative;
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-footer {
+      margin-top: auto;
+    }
+  }
+}
+.ryb-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    color: #495057;
+  }
+}
+
+.ryb-list-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+
+    i {
+      font-size: 1.125rem;
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.art-to-wrapper {
+  display: flex;
+  .p-card {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.creator-wrapper {
+  position: relative;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  background-color: #fafafa;
+
+  .creator-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ededed;
+    border-top: 0;
+  }
+}
+
+.markdown-wrapper {
+  max-width: 750px;
+
+  img {
+    border: 1px solid #ededed;
+    max-width: 100%;
+  }
+}
+
+.color-red {
+  background-color: #e91724;
+  color: white;
+}
+
+.color-orange {
+  background-color: #feb329;
+}
+
+.color-yellow {
+  background-color: #fbda03;
+}
+
+.color-lightGreen {
+  background-color: #acdb00;
+}
+
+.color-green {
+  background-color: #32ae54;
+  color: white;
+}
+
+.color-turquoise {
+  background-color: #00dfd3;
+}
+
+.color-lightBlue {
+  background-color: #14dfff;
+}
+
+.color-blue {
+  background-color: #005fdf;
+  color: white;
+}
+
+.color-violet {
+  background-color: #8e56aa;
+  color: white;
+}
+
+.color-pink {
+  background-color: #ff7bae;
+}
+
+.color-tan {
+  background-color: #efc5a0;
+}
+
+.color-lightBrown {
+  background-color: #dd9863;
+}
+
+.color-brown {
+  background-color: #743d12;
+  color: white;
+}
+
+.color-black {
+  background-color: #4b4b4b;
+  color: white;
+}
+
+.color-gray {
+  background-color: #b2b3b4;
+}
+
+.color-white {
+  background-color: #f1f1f1;
+}
+
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.creator-snapshot-wrapper {
+  position: fixed;
+  top: 100%;
+  transform: translateY(100%);
+  display: flex;
+  width: 2048px;
+  height: 2048px;
+}
+
+.color-example {
+  width: 33px;
+  margin-right: 0.5rem;
+
+  input {
+    height: 100%;
+  }
+}
+
+.upload-files-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .upload-file,
+  .upload-file-rect {
+    width: initial ;
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .upload-file-rect .ryb-preview {
+    width: 219px !important;
+  }
+}
+
+.ql-container,
+.ql-editor {
+  font-family: 'Montserrat', sans-serif;
+  color: black !important;
+}
+
+.ql-editor p,
+.ql-editor ol,
+.ql-editor ul,
+.ql-editor pre,
+.ql-editor blockquote,
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+  font-weight: 300;
+}
+.ql-editor h1 {
+  font-size: 2.0625em;
+}
+.ql-editor h2 {
+  font-size: 1.6875em;
+}
+.ql-editor h3 {
+  font-size: 1.3125em;
+}
+.ql-editor h4 {
+  font-size: 1.0625em;
+}

@@ -1,0 +1,160 @@
+// Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+.ryb-table {
+  .p-datatable-header {
+    background: none;
+    border-top: 0;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+
+  .p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-thead {
+    background: none;
+  }
+
+  .p-datatable-wrapper {
+    overflow: auto;
+
+    .p-column-title {
+      white-space: nowrap;
+    }
+  }
+
+  .p-datatable-footer {
+    background: none;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-thead,
+.p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-tfoot,
+.p-datatable.p-datatable-scrollable
+  > .p-datatable-wrapper
+  > .p-virtualscroller
+  > .p-datatable-table
+  > .p-datatable-thead,
+.p-datatable.p-datatable-scrollable
+  > .p-datatable-wrapper
+  > .p-virtualscroller
+  > .p-datatable-table
+  > .p-datatable-tfoot {
+  background: white;
+}
+
+.table-header {
+  display: flex;
+  flex-direction: column;
+
+  .table-headers-button {
+    display: flex;
+  }
+}
+
+.p-dialog {
+  position: relative;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.p-component-overlay {
+  z-index: 1000;
+}
+
+.p-confirm-dialog {
+  width: 50vw;
+  max-width: 500px;
+
+  @media (max-width: 1024px) {
+    width: 75vw;
+  }
+
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
+}
+
+.p-image-toolbar {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.p-datatable.p-datatable-hoverable-rows .p-datatable-tbody > tr:not(.p-highlight):hover {
+  background: #f1f4f8;
+}
+
+.opacity-three-quarters {
+  opacity: 0.75;
+}
+
+blockquote {
+  padding: 0 1rem;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $borderRadius;
+  box-shadow:
+    0px 3px 5px rgba(0, 0, 0, 0.02),
+    0px 0px 2px rgba(0, 0, 0, 0.05),
+    0px 1px 4px rgba(0, 0, 0, 0.08) !important;
+
+  .p-card-title,
+  .p-card-subtitle {
+    word-break: break-word;
+  }
+}
+
+.p-dropdown-panel {
+  z-index: 1001;
+}
+
+.p-multiselect-panel {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.header-actions-filter-active {
+  border-left: #e9ecef;
+
+  .p-column-filter {
+    padding: 0 0.375rem;
+    border-left: 1px solid #e9ecef;
+
+    .pi-filter-icon:before {
+      content: '\e9e0';
+    }
+  }
+}
+
+.p-tooltip {
+  z-index: 10000000;
+}
+.p-tabmenuitem .p-menuitem-link .p-menuitem-text {
+  white-space: nowrap;
+}
+
+.p-editor-toolbar {
+  display: none;
+}
+
+.ql-toolbar {
+  border-radius: 3px 3px 0 0;
+}
+
+.p-invalid {
+  .ql-toolbar, .p-editor-content {
+    border-color: #f44336 !important;
+  }
+}

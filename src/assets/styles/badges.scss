@@ -1,0 +1,33 @@
+.published-badge,
+.content-type-badge {
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  padding: 0.25em 0.5rem;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.content-type-badge {
+  display: flex;
+  background-color: #e8eaed;
+  margin-left: 0.125rem;
+}
+
+.published-badge {
+  &.status-true,
+  &.status-1,
+  &.status-ban-0,
+  &.status-ban-fa {
+    background: #c8e6c9;
+    color: #256029;
+  }
+
+  &.status-false,
+  &.status--1,
+  &.status-ban-1,
+  &.status-ban-ba {
+    background: #ffcdd2;
+    color: #c63737;
+  }
+}
