@@ -24,6 +24,7 @@ defineProps<{
 .ryb-chip {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: #e8eaed;
   padding: 0.125rem 0.375rem;

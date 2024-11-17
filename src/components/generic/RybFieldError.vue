@@ -8,6 +8,6 @@ const beautifyErrors = computed(() => props.errors.map((v) => v.$message.toStrin
 </script>
 <template>
   <span>
-    <small id="input-error" class="p-error">{{ beautifyErrors }}</small>
+    <small id="input-error" class="p-error" style="color: rgb(248 113 113)">{{ beautifyErrors }}</small>
   </span>
 </template>

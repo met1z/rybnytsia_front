@@ -6,27 +6,20 @@
 	import { useToast } from 'primevue/usetoast'
 	import { computed, reactive, ref } from 'vue'
 	import { useRoute, useRouter } from 'vue-router'
-
-	import { email, helpers, minLength, required } from '@vuelidate/validators'
 	import { useLogin } from '../common/composables/useLogin'
 	import { ERROR_MESSAGE } from '../common/constants'
 	import RybFieldError from '../components/generic/RybFieldError.vue'
 	import RybInput from '../components/generic/RybInput.vue'
 	import { useUserStore } from '../stores/user'
+	import { rybEmail } from '../common/validators/ryb-email.validator'
+	import { rybRequired } from '../common/validators/ryb-required.validator'
+	import { rybMinLength } from '../common/validators/ryb-min-length.validator'
 
 	const rules = {
-		email: {
-			required: helpers.withMessage(`Email is required`, required),
-			email: helpers.withMessage(`Email is not a valid email address`, email),
-		},
+		email: { required: rybRequired('Email'), email: rybEmail() },
 		password: {
-			required: helpers.withMessage(`Password is required`, required),
-			minLengthValue: helpers.withParams(
-				{
-					detailedErrorMessage: `The minimum allowed Password length is 8`,
-				},
-				minLength(8)
-			),
+			required: rybRequired('Password'),
+			minLengthValue: rybMinLength('Password', 8),
 		},
 	}
 
