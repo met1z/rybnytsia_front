@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { getCurrentInstance, ref } from 'vue'
 import { SidebarItem } from '../../common/interfaces/sidebar-item.interface'
+import { Badge } from 'primevue'
 
 const emit = defineEmits<{
   (e: 'menuitem-click', item: SidebarItem): void
@@ -10,7 +11,6 @@ withDefaults(defineProps<{ items: SidebarItem[]; root?: boolean }>(), {
   root: false,
 })
 
-// TODO Remove this hack when global properties on script setup will be exposed
 const app = getCurrentInstance()
 defineExpose({
   $primevue: app?.appContext.config.globalProperties.$primevue,
@@ -60,7 +60,7 @@ const onMenuItemClick = (item: SidebarItem, index: number) => {
             <i :class="item.icon"></i>
             <span>{{ item.label }}</span>
             <i v-if="item.items" class="pi pi-fw pi-angle-down menuitem-toggle-icon"></i>
-            <prime-badge v-if="item.badge" :value="item.badge" />
+            <Badge v-if="item.badge" :value="item.badge" />
           </router-link>
           <a
             v-if="!item.to"
@@ -76,7 +76,7 @@ const onMenuItemClick = (item: SidebarItem, index: number) => {
             <i :class="item.icon"></i>
             <span>{{ item.label }}</span>
             <i v-if="item.items" class="pi pi-fw pi-angle-down menuitem-toggle-icon"></i>
-            <prime-badge v-if="item.badge" :value="item.badge" />
+            <Badge v-if="item.badge" :value="item.badge" />
           </a>
           <transition name="layout-submenu-wrapper">
             <app-sidebar

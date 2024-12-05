@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 	import useVuelidate from '@vuelidate/core'
 	import { cloneDeep, upperFirst } from 'lodash'
-	import { computed, nextTick, ref, toRefs, watch } from 'vue'
+	import { computed, ref, toRefs, watch } from 'vue'
 
 	import { useModal } from '../../../../common/composables/useModal'
 	import { User } from '../../../../common/interfaces/user.interface'
@@ -29,8 +29,6 @@
 	const emit = defineEmits<{
 		(e: 'close'): void
 		(e: 'save', payload: CreateUser): void
-		(e: 'search', query?: string): void
-		(e: 'search-questionnaire', query?: string): void
 	}>()
 	const props = defineProps<{
 		options: { isCreated?: boolean; header: string }
@@ -76,12 +74,11 @@
 		emit('save', state.value as unknown as CreateUser)
 	}
 
-	watch(dialog, async () => {
+	watch(dialog, () => {
 		state.value = cloneDeep({
 			...stateInitial,
 			...props.data,
 		})
-		await nextTick()
 	})
 </script>
 <template>

@@ -4,7 +4,7 @@ import { getFileName } from '../utils/get-file-id.util'
 export const useFiles = () => {
 	const createFile = async (item: File) => {
 		const formData = new FormData()
-		formData.append('image', item)
+		formData.append('file', item)
 		const data = await api.createFile(formData)
 		return data
 	}

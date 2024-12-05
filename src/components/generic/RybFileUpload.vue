@@ -2,6 +2,7 @@
 	import { computed, type Ref, ref, toRefs, watch } from 'vue'
 
 	import RybPhoto from './RybPhoto.vue'
+	import { Button } from 'primevue'
 
 	const file = ref<File>()
 	const fileInput = ref<HTMLInputElement | null>(null)
@@ -96,7 +97,7 @@
 				<span class="p-button-icon p-button-icon-left pi pi-upload"></span>
 				<span class="p-button-label">New</span>
 			</span>
-			<prime-button :disabled="!file" icon="pi pi-times" @click="clear" />
+			<Button :disabled="!file" icon="pi pi-times" @click="clear" />
 		</div>
 	</div>
 </template>

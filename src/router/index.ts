@@ -66,25 +66,23 @@ const router = createRouter({
 				requiresAuth: true,
 			},
 			children: [
-				// { path: '', redirect: { name: 'Login' } },
-				// {
-				// 	meta: { contentAccess: true },
-				// 	path: '/news',
-				// 	component: () => import('../components/generic/pages/RoutePage.vue'),
-				// 	children: [
-				// 		{
-				// 			meta: { title: 'News' },
-				// 			path: '',
-				// 			name: 'News',
-				// 			component: () => import('../pages/main/news/NewsPage.vue'),
-				// 		},
-				// 	],
-				// },
 				{
 					meta: { title: 'Users', adminAccess: true },
 					name: 'Users',
 					path: '/users',
 					component: () => import('../pages/main/users/UsersPage.vue'),
+				},
+				{
+					meta: { title: 'Categories', editorAccess: true },
+					name: 'Categories',
+					path: '/categories',
+					component: () => import('../pages/main/categories/CategoriesPage.vue'),
+				},
+				{
+					meta: { title: 'Products', editorAccess: true },
+					name: 'Products',
+					path: '/products',
+					component: () => import('../pages/main/products/ProductsPage.vue'),
 				},
 			],
 		},

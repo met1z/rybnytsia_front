@@ -15,6 +15,7 @@ import {
 	BadgeDirective,
 	ConfirmationService,
 	DialogService,
+	Ripple,
 	StyleClass,
 	ToastService,
 } from 'primevue'
@@ -39,6 +40,7 @@ app.use(ConfirmationService)
 app.use(ToastService)
 app.use(DialogService)
 
+app.directive('ripple', Ripple)
 app.directive('badge', BadgeDirective)
 app.directive('styleclass', StyleClass)
 

@@ -29,8 +29,8 @@ export const useUsers = () => {
 	}
 
 	const create = async (input: CreateUser) => {
-		const newCollection = await api.create(input)
-		store.addToStart(newCollection)
+		const item = await api.create(input)
+		store.addToStart(item)
 		toast.add(CREATED_MESSAGE)
 	}
 

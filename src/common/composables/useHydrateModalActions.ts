@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 import { DIALOG_ID_CREATE } from '../constants'
 import { hydrateErrorMessage } from '../utils/hydrate-error-message.util'
 
-export const useHydrateModalActions = <C extends object, U = object | string | number>(v?: {
+export const useHydrateModalActions = <C extends object, U = object | string | number, U2 = object | string | number>(v?: {
   dialogHeader: string
 }) => {
   const toast = useToast()
@@ -12,7 +12,7 @@ export const useHydrateModalActions = <C extends object, U = object | string | n
   const dialog = ref(false)
   const dialogLoading = ref(false)
   const dialogDataId = ref<string | number>(DIALOG_ID_CREATE)
-  const dialogData = ref<U | undefined>(undefined)
+  const dialogData = ref<U | U2 | undefined>(undefined)
 
   const dialogOptions = computed(() => {
     const isCreated = dialogDataId.value === DIALOG_ID_CREATE
